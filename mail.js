@@ -23,7 +23,7 @@ const sendMail = async (data) => {
 
     const myAccessToken = myAccessTokenObject?.token;
 
-    const transporter = nodemailer.createTransport({
+    const transporter = await nodemailer.createTransport({
       service: "gmail",
       auth: {
         type: "OAuth2",

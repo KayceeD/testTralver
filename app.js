@@ -7,6 +7,7 @@ const ejs = require("ejs");
 const helmet = require('helmet');
 const ejsLayouts = require("express-ejs-layouts");
 const morgan = require('morgan');
+require('dotenv').config();
 
 /*Routes*/
 const halongRoute = require('./routes/halongRoute');

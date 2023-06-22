@@ -1,7 +1,6 @@
 const nodemailer = require("nodemailer");
 const { OAuth2Client } = require("google-auth-library");
 
-require("dotenv").config();
 
 const GOOGLE_MAILER_CLIENT_ID = process.env.GOOGLE_MAILER_CLIENT_ID;
 const GOOGLE_MAILER_CLIENT_SECRET = process.env.GOOGLE_MAILER_CLIENT_SECRET;

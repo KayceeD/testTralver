@@ -21,9 +21,9 @@ const sendMail = async (data) => {
   try {
     const myAccessTokenObject = await myOAuth2Client.getAccessToken();
 
-    const myAccessToken = myAccessTokenObject?.token;
+    const myAccessToken = myAccessTokenObject.token;
 
-    const transporter = await nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         type: "OAuth2",

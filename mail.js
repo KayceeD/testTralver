@@ -30,7 +30,7 @@ const sendMail = async (data) => {
         user: ADMIN_EMAIL_ADDRESS,
         clientId: GOOGLE_MAILER_CLIENT_ID,
         clientSecret: GOOGLE_MAILER_CLIENT_SECRET,
-        refresh_token: GOOGLE_MAILER_REFRESH_TOKEN,
+        refreshToken: GOOGLE_MAILER_REFRESH_TOKEN,
         accessToken: myAccessToken,
       },
     });

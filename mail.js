@@ -21,7 +21,7 @@ const sendMail = async (data) => {
   try {
     const myAccessTokenObject = await myOAuth2Client.getAccessToken();
 
-    const myAccessToken = myAccessTokenObject.token;
+    const myAccessToken = myAccessTokenObject?.token;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -30,7 +30,7 @@ const sendMail = async (data) => {
         user: ADMIN_EMAIL_ADDRESS,
         clientId: GOOGLE_MAILER_CLIENT_ID,
         clientSecret: GOOGLE_MAILER_CLIENT_SECRET,
-        refreshToken: GOOGLE_MAILER_REFRESH_TOKEN,
+        refresh_token: GOOGLE_MAILER_REFRESH_TOKEN,
         accessToken: myAccessToken,
       },
     });

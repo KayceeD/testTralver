@@ -6,7 +6,8 @@ $('document').ready(()=>{
             method:"POST",
             data:$('form').serialize(),
             success:()=>{
-                alert('Dat hang thanh cong');
+                $('#exampleModal').modal('hide');
+                $('#exampleModalThank').modal('show');
             }
         })
     })

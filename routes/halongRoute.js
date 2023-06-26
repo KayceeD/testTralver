@@ -1,11 +1,8 @@
 const express = require('express')
 const halongRoute = express.Router();
+const productController = require('../controller/productController');
 
-const fakeData = require("../fakedata/fakeToursdata.json");
-
-halongRoute.get('/',(req,res)=>{
-    res.render('../pages/tour-ha-long',{title:"Đặt Tour hạ long",data:fakeData});
-})
+halongRoute.get('/:page',productController.getHalongproduct);
 
 
 module.exports = halongRoute

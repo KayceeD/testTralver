@@ -11,6 +11,7 @@ require('dotenv').config();
 
 /*Routes*/
 const halongRoute = require('./routes/halongRoute');
+const sapaRoute = require('./routes/sapaRoute');
 
 const productController = require('./controller/productController');
 
@@ -43,7 +44,7 @@ const PORT = 3000;
 dbConnect();
 
 //Get home page
-app.get("/",productController.getAllproduct);
+app.get("/",productController.getHomeproduct);
 
 app.post("/", async(req, res) => {
   console.log(req.body);
@@ -53,6 +54,7 @@ app.post("/", async(req, res) => {
 })
 
 app.use('/tours-ha-long',halongRoute);
+app.use('/tours-sapa',sapaRoute);
 
 app.listen(PORT, () => {
   console.log(`App is running on port ${PORT}`);

@@ -13,7 +13,7 @@
 
       <article class="mt-3 row row-cols-1  row-gap-3">
         <div class="col col-lg-8">
-          <a href="/tours-ha-long">
+          <a href="/tours-ha-long/1">
             <div class="card h-100">
               <img src="../../public/images/Halong.jpg" class="card-img w-100 h-100" alt="...">
               <div class="card-img-overlay d-flex justify-content-center align-items-center ">
@@ -26,7 +26,7 @@
         </div>
 
         <div class="col col-lg-4">
-          <a href="">
+          <a href="/tours-sapa">
             <div class="card h-100">
               <img src="../../public/images/sapa_vertical.jpg" class="card-img w-100 h-100" alt="...">
               <div class="card-img-overlay d-flex justify-content-center align-items-center">
@@ -102,12 +102,13 @@
                 <span class="card-text">
                   <%=item.Gia%> VND
                 </span>
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
                   Tour</a>
               </div>
             </div>
           </div>
-          
+
           <% }) %>
       </article>
     </div>
@@ -118,13 +119,13 @@
         <h2 id="tourHalong" class="text-center fw-bold">
           TOUR HẠ LONG
         </h2>
-        <a class="link-underline link-underline-opacity-0" href="">
+        <a class="link-underline link-underline-opacity-0" href="/tours-ha-long/1">
           <p class="text-center text-info fs-5">Xem tất cả tour</p>
         </a>
       </div>
 
       <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
-        <% tours.map(item=>{ %>
+        <% halongTours.map(item=>{ %>
           <div class="col">
             <div class="card h-100">
               <img src=<%=item.Anh%> class="card-img-top" alt="...">
@@ -141,7 +142,8 @@
                 <span class="card-text">
                   <%=item.Gia%> VND
                 </span>
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
                   Tour</a>
               </div>
             </div>
@@ -155,13 +157,13 @@
     <div class="my-5">
       <div class="my-3">
         <h2 id="tourSapa" class="text-center fw-bold">TOUR SAPA</h2>
-        <a class="link-underline link-underline-opacity-0" href="#">
+        <a class="link-underline link-underline-opacity-0" href="/tours-sapa">
           <p class="text-center text-info fs-5">Xem tất cả tour</p>
         </a>
       </div>
 
       <article class="mt-3 row row-cols-1 row-cols-md-2 row-cols-xl-4 row-gap-3">
-        <% tours.map(item=>{ %>
+        <% sapaTours.map(item=>{ %>
           <div class="col">
             <div class="card h-100">
               <img src=<%=item.Anh%> class="card-img-top" alt="...">
@@ -178,8 +180,8 @@
                 <span class="card-text">
                   <%=item.Gia%> VND
                 </span>
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#exampleModal" data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-Tma="<%=item.MaTour%>" data-bs-Tname="<%=item.TenTour%>" data-bs-Tgia="<%=item.Gia%>">Đặt
                   Tour</a>
               </div>
             </div>
@@ -189,7 +191,8 @@
       </article>
     </div>
     <!-- END CONTENTS__SAPA TOUR -->
+    <%- include('./hieu/whychoose.ejs') %>
   </div>
   <!--Main Content-->
   <%- include ('./partials/modal.ejs') %>
-  <%- include ('./partials/modal_thank.ejs') %>
+    <%- include ('./partials/modal_thank.ejs') %>

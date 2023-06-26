@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema({
   MaTour: Number,
   TenTour: String,
-  Gia: String,
+  Gia: Number,
   Anh: String,
   description:String
 },{
     collection:'products'
 });
 
-module.exports = mongoose.model('products',productSchema)
+module.exports = mongoose.model('product',productSchema)

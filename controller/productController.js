@@ -96,11 +96,32 @@ const getNuocngoaiproduct = async (req, res) => {
   });
 };
 
+const getTourkhacproduct = async (req, res) => {
+  let page = req.params.page || 1;
+  let perPage = 16;
+  const data = await productModel
+    .find()
+    .skip(perPage * page - perPage)
+    .limit(perPage);
+
+  let count = await productModel.countDocuments();
+  console.log(count);
+
+  res.render("../pages/tour-khac", {
+    title: "Đặt Tour khác",
+    tours: data,
+    current: page,
+    pages: Math.ceil(count / perPage),
+  });
+};
+
+
 
 module.exports = {
   getHomeproduct,
   getHalongproduct,
   getSapaproduct,
   getNuocngoaiproduct,
-  getTrongnuocproduct
+  getTrongnuocproduct,
+  getTourkhacproduct
 };
